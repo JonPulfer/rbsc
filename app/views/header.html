@@ -4,15 +4,31 @@
   <head>
     <title><<<.title>>></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/public/img/favicon.ico">
-    <<<range .moreStyles>>>
-      <link rel="stylesheet" type="text/css" href="/public/<<<.>>>">
-    <<<end>>>
+ 	
 	<<<append . "moreScripts" "js/angular.js">>>
   	<<<append . "moreScripts" "js/angular-route.js">>>
+	<<<append . "moreStyles" "css/main.css">>>
+	<<<if .DevMode >>>
+	    <!-- Enable the debug toolbar and jasmine testing framework -->
+		<<<append . "moreScripts" "js/debugbar/main.js">>>
+		<<<append . "moreScripts" "js/jasmine/lib/jasmine-2.0.3/jasmine.js">>>
+		<<<append . "moreScripts" "js/jasmine/lib/jasmine-2.0.3/jasmine-html.js">>>
+		<<<append . "moreScripts" "js/jasmine/lib/jasmine-2.0.3/boot.js">>>
+		<<<append . "moreStyles" "js/jasmine/lib/jasmine-2.0.3/jasmine.css">>>
+	<<<end>>>
   	<<<range .moreScripts>>>
   		<script src="/public/<<<.>>>" type="text/javascript" charset="utf-8"></script>
   	<<<end>>>
-    
+    <<<range .moreStyles>>>
+      <link rel="stylesheet" type="text/css" href="/public/<<<.>>>">
+    <<<end>>>
   </head>
   <body>
+
+<div class="header-bar">
+	<<<if .DevMode>>>
+	  <<<template "debug.html" .>>>
+	<<<end>>>
+</div>

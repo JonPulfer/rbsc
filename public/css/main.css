@@ -1,0 +1,35 @@
+body {
+	margin: 0px;
+}
+
+div.header-bar {
+	background: #65553B;
+	width: 100%;
+	height: 35px;
+}
+
+div.image-pane {
+	background: #A68D61;
+	width: 100%;
+	height: 300px;
+}
+
+div.debug-selector {
+	background: #ffffff;
+	position: float;
+	float: right;
+	height: 35px;
+	width: 8%;
+}
+
+div.debug-panel {
+	background: #ffffff;
+	width: 40%;
+	top: 35px;
+	position: float;
+	float: right;
+}
+
+div.clear-float {
+	clear: both;
+}
