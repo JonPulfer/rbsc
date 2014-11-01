@@ -1,0 +1,8 @@
+*.png
+*.ico
+*.jpg
+*.jpeg
+test-results/
+tmp/
+routes/
+public/js/jasmine/
