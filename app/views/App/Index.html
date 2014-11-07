@@ -1,6 +1,11 @@
 <<<set . "title" "Rollesby Broad SC">>>
 <<<template "header.html" .>>>
 
-
-
+<div class="article-pane">
+<<<range $index, $art := .articles>>>
+<p>
+	<h3><<<$art.Title>>></h3>
+	<p><<<$art.Body>>></p>
+</p>
+<<<end>>>
 <<<template "footer.html" .>>>

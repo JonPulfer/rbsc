@@ -2,6 +2,7 @@
 *.ico
 *.jpg
 *.jpeg
+dbconf.yml
 test-results/
 tmp/
 routes/
