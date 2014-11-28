@@ -5,7 +5,7 @@ import (
 )
 
 type Article struct {
-	Id        int64
+	Id        int64     `json:"id"`
 	Title     string    `json:"title"`
 	Body      string    `json:"body"`
 	CreatedAt time.Time `json:"-"`
@@ -17,7 +17,9 @@ type ArticleResp struct {
 	Article *Article `json:"article"`
 }
 
-type ArticlesResp []ArticleResp
+type ArticlesResp struct {
+	Articles Articles `json:"articles"`
+}
 
 type Articles []Article
 
@@ -27,13 +29,9 @@ func (a Article) TableName() string {
 
 func AllArticles() ArticlesResp {
 	var arts Articles
-	artsr := ArticlesResp{}
 	DB.Find(&arts)
-	for _, art := range arts {
-		artr := ArticleResp{
-			Article: &art,
-		}
-		artsr = append(artsr, artr)
+	artsr := ArticlesResp{
+		Articles: arts,
 	}
 	return artsr
 }
