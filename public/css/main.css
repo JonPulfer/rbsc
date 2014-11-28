@@ -1,11 +1,13 @@
 body {
 	margin: 0px;
 	background: #816C4B;
+	font-family: 'Oxygen', sans-serif;
 }
 
 /*
 Header bar at the top of every page
 */
+
 .header-bar {
 	background: #65553B;
 	width: 100%;
@@ -21,6 +23,7 @@ div.button {
 /*
 Image area on the home page
 */
+
 div.image-pane {
 	background: #ffffff;
 	width: 100%;
@@ -40,6 +43,7 @@ div.image-pane {
 /*
 Title area
 */
+
 .page-title {
 	text-align: center;
 	width: 100%;
@@ -56,13 +60,13 @@ Title area
 }
 
 .page-title > h1 {
-	font-family: Verdana, Geneva, sans-serif;
 	margin: 0px;
 }
 
 /*
 Debug bar when in dev mode
 */
+
 div.debug-selector {
 	background: #ffffff;
 	float: right;
@@ -84,28 +88,75 @@ div.debug-panel {
 
 .promo-pane {
 	background: #A88D62;
-	width: 79%;
-	float: right;
-	padding: 5px
+	width: 95%;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	border-radius: 10px;
 }
+
+/*
+Articles
+*/
 
 .article-pane {
-	background: #967E58;
-	float: right;
 	width: 97%;
-	margin: 3px 10px;
-	padding: 2px 5px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
+.article-item {
+	margin: 0px 0px 10px 0px;
+}
+
+.article-title {
+	background: #5F5037;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding: 0px 0px 0px 5px;
+}
+
+.article-title h2 {
+	margin: 0px;
+	font-family: 'Bitter', serif;
+}
+
+.article-body {
+	background: #C0A57C;
+	padding: 0px 0px 5px 5px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.article-body p {
+	margin: 0px 0px 10px 0px;
+}
+
+/*
+Content holders
+*/
+
 .content-pane {
-	background: #A88D62;
-	width: 79%;
+	background: #816C4B;
+	width: 80%;
 	float: right;
 }
 
 .left-menu {
-	float:left;
 	height: 300px;
 	width: 20%;
+	float: left;
 	background: #65553B;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.footer-content {
+	width: 100%;
+	height: 30px;
+	margin-top: 10px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #65553B;
 }

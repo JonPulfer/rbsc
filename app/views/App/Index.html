@@ -1,23 +1,30 @@
 <<<set . "title" "Rollesby Broad SC">>>
 <<<template "header.html" .>>>
 
-<div class="left-menu">
-</div>
-<div class="promo-pane">
-	<p><<<.introText>>></p>
-</div>
-<div class="content-pane">
-	
-	<div class="article-pane">
-		{{#each article in model}}
-			<div class="article-title">{{article.title}}</div>
-			<div class="article-body">{{article.body}}</div>
-		{{/each}}
-		
+<div class="main-content">
+	<div class="left-menu">
+	 Menu
 	</div>
 	
+	<div class="content-pane">
+		<div class="promo-pane">
+			<p><<<.introText>>></p>
+		</div>
+		
+		<div class="article-pane">
+			{{#each article in model}}
+				<div class="article-item">
+					<div class="article-title"><h2>{{article.title}}</h2></div>
+					<div class="article-body">{{{article.body}}}</div>
+				</div>
+			{{/each}}
+			
+		</div>
+		
+	</div>
+	<div class="clear-float"></div>
 </div>
 
-<div class="clear-float"></div>
+
 
 <<<template "footer.html" .>>>

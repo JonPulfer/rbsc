@@ -6,14 +6,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/public/img/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Cabin|Oxygen|Roboto' rel='stylesheet' type='text/css'>
  	
 	<<<append . "moreStyles" "css/main.css">>>
-	<<<if .DevMode >>>
-	    <<<append . "moreScripts" "js/jasmine/lib/jasmine-2.0.3/jasmine.js">>>
-		<<<append . "moreScripts" "js/jasmine/lib/jasmine-2.0.3/jasmine-html.js">>>
-		<<<append . "moreScripts" "js/jasmine/lib/jasmine-2.0.3/boot.js">>>
-		<<<append . "moreStyles" "js/jasmine/lib/jasmine-2.0.3/jasmine.css">>>
-	<<<end>>>
+	
   	
     <<<range .moreStyles>>>
       <link rel="stylesheet" type="text/css" href="/public/<<<.>>>">
