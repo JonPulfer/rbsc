@@ -7,3 +7,6 @@ test-results/
 tmp/
 routes/
 public/js/jasmine/
+public/js/ember*
+public/js/handlebars*.js
+public/js/jquery*

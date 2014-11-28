@@ -1,11 +1,23 @@
 <<<set . "title" "Rollesby Broad SC">>>
 <<<template "header.html" .>>>
 
-<div class="article-pane">
-<<<range $index, $art := .articles>>>
-<p>
-	<h3><<<$art.Title>>></h3>
-	<p><<<$art.Body>>></p>
-</p>
-<<<end>>>
+<div class="left-menu">
+</div>
+<div class="promo-pane">
+	<p><<<.introText>>></p>
+</div>
+<div class="content-pane">
+	
+	<div class="article-pane">
+		{{#each article in model}}
+			<div class="article-title">{{article.title}}</div>
+			<div class="article-body">{{article.body}}</div>
+		{{/each}}
+		
+	</div>
+	
+</div>
+
+<div class="clear-float"></div>
+
 <<<template "footer.html" .>>>

@@ -1,11 +1,12 @@
 body {
 	margin: 0px;
+	background: #816C4B;
 }
 
 /*
 Header bar at the top of every page
 */
-div.header-bar {
+.header-bar {
 	background: #65553B;
 	width: 100%;
 	height: 35px;
@@ -26,11 +27,11 @@ div.image-pane {
 	height: auto;
 }
 
-body > div.image-pane > div {
+.image-pane > div {
 	height: auto;
 }
 
-body > div.image-pane > div > img {
+.image-pane > div > img {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -39,7 +40,7 @@ body > div.image-pane > div > img {
 /*
 Title area
 */
-div.page-title {
+.page-title {
 	text-align: center;
 	width: 100%;
 	color: #534630;
@@ -54,7 +55,7 @@ div.page-title {
 	margin: 0px 0px 10px 0px;
 }
 
-div.page-title > h1 {
+.page-title > h1 {
 	font-family: Verdana, Geneva, sans-serif;
 	margin: 0px;
 }
@@ -71,12 +72,40 @@ div.debug-selector {
 
 div.debug-panel {
 	background: #ffffff;
+	display: block;
 	width: 40%;
 	top: 35px;
 	float: right;
 }
 
-div.clear-float {
+.clear-float {
 	clear: both;
 }
 
+.promo-pane {
+	background: #A88D62;
+	width: 79%;
+	float: right;
+	padding: 5px
+}
+
+.article-pane {
+	background: #967E58;
+	float: right;
+	width: 97%;
+	margin: 3px 10px;
+	padding: 2px 5px;
+}
+
+.content-pane {
+	background: #A88D62;
+	width: 79%;
+	float: right;
+}
+
+.left-menu {
+	float:left;
+	height: 300px;
+	width: 20%;
+	background: #65553B;
+}
