@@ -1,9 +1,11 @@
 <<<set . "title" "Rollesby Broad SC">>>
 <<<template "header.html" .>>>
+<<<template "App/article.html" .>>>
 
+<script type="text/x-handlebars">
 <div class="main-content">
 	<div class="left-menu">
-	 Menu
+		{{outlet sidebar}}
 	</div>
 	
 	<div class="content-pane">
@@ -11,20 +13,14 @@
 			<p><<<.introText>>></p>
 		</div>
 		
-		<div class="article-pane">
-			{{#each article in model}}
-				<div class="article-item">
-					<div class="article-title"><h2>{{article.title}}</h2></div>
-					<div class="article-body">{{{article.body}}}</div>
-				</div>
-			{{/each}}
-			
-		</div>
+		
+		{{outlet content}}
+		
+		
 		
 	</div>
+	
 	<div class="clear-float"></div>
 </div>
-
-
 
 <<<template "footer.html" .>>>

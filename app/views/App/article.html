@@ -1,0 +1,19 @@
+<script type="text/x-handlebars" data-template-name="articles">
+	<div class="article-pane">
+		{{#each article in model}}
+			<div class="article-item">
+				<div class="article-title">{{#link-to 'article' article}}<h2>{{article.title}}</h2>{{/link-to}}</div>
+				<div class="article-body">{{{article.body}}}</div>
+			</div>
+		{{/each}}	
+	</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="article">
+	<div class="article-pane">
+		<div class="article-item">
+			<div class="article-title">{{#link-to 'article' id}}<h2>{{title}}<h2>{{/link-to}}</div>
+			<div class="article-body">{{{body}}}</div>
+		</div>
+	</div>
+</script>

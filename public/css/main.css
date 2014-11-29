@@ -117,6 +117,16 @@ Articles
 	padding: 0px 0px 0px 5px;
 }
 
+.article-title a:link {
+	text-decoration: none;
+	color: #372E1F;
+}
+
+.article-title a:visited {
+	text-decoration: none;
+	color: #372E1F;
+}
+
 .article-title h2 {
 	margin: 0px;
 	font-family: 'Bitter', serif;
