@@ -8,12 +8,18 @@ SailingNews.ArticlesRoute = Ember.Route.extend({
     	// the model is an Array of all of the articles
     	return this.store.find('article');
   	},
+	
 	renderTemplate: function() {
-   		this.render({
+		this.render({
 			into: 'application',
 			outlet: 'content',
 		});
+		this.render('weather', {
+			into: 'application',
+			outlet: 'sidebar',
+		});
   	},
+	
 });
 
 SailingNews.ArticleRoute = Ember.Route.extend({
@@ -26,4 +32,4 @@ SailingNews.ArticleRoute = Ember.Route.extend({
 			outlet: 'content',
 		});
   	},
-})
+});

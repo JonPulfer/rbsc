@@ -1,0 +1,14 @@
+<script type="text/x-handlebars" data-template-name="weather">
+	{{#if weatherPromise.isPending}}
+		Getting weather
+	{{else}}
+		<h3>Current weather near Rollesby</h3>
+		<p>
+		Wind {{windSpeedMPH}} mph
+		
+		from {{weatherPromise.responseJSON.wind.deg}} degs
+		</p>
+		<p>Temperature {{weatherPromise.responseJSON.main.temp}} C</p>
+		<p>Pressure {{weatherPromise.responseJSON.main.pressure}} hPa</p>
+	{{/if}}
+</script>
