@@ -14,11 +14,7 @@ SailingNews.ArticlesRoute = Ember.Route.extend({
 			into: 'application',
 			outlet: 'content',
 		});
-		this.render('weather', {
-			into: 'application',
-			outlet: 'sidebar',
-		});
-  	},
+	},
 	
 });
 

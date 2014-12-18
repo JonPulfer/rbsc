@@ -1,16 +1,17 @@
 package models
 
 import (
+	"github.com/lib/pq"
 	"time"
 )
 
 type Article struct {
-	Id        int64     `json:"id"`
-	Title     string    `json:"title"`
-	Body      string    `json:"body"`
-	CreatedAt time.Time `json:"-"`
-	UpdatedAt time.Time `json:"-"`
-	DeletedAt time.Time `json:"-"`
+	Id        int64       `json:"id"`
+	Title     string      `json:"title"`
+	Body      string      `json:"body"`
+	CreatedAt pq.NullTime `json:"-"`
+	UpdatedAt pq.NullTime `json:"-"`
+	DeletedAt pq.NullTime `json:"-"`
 }
 
 type ArticleResp struct {
@@ -25,6 +26,19 @@ type Articles []Article
 
 func (a Article) TableName() string {
 	return "article"
+}
+
+func (art *Article) BeforeCreate() (err error) {
+	art.CreatedAt.Time = time.Now()
+	art.CreatedAt.Valid = true
+	art.UpdatedAt.Time = time.Now()
+	art.UpdatedAt.Valid = true
+	return
+}
+func (art *Article) BeforeSave() (err error) {
+	art.UpdatedAt.Time = time.Now()
+	art.UpdatedAt.Valid = true
+	return
 }
 
 func AllArticles() ArticlesResp {
