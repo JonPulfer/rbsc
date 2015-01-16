@@ -1,15 +1,11 @@
-<script type="text/x-handlebars" data-template-name="components/weather-info">
-	{{#if weatherPromise.isPending}}
-		Getting weather
-	{{else}}
-		
-		<h3>Current weather near Rollesby</h3>
-		<p>
-		Wind {{windSpeedMPH}} mph
-		
-		from {{weatherPromise.responseJSON.wind.deg}} degs
-		</p>
-		<p>Temperature {{weatherPromise.responseJSON.main.temp}} C</p>
-		<p>Pressure {{weatherPromise.responseJSON.main.pressure}} hPa</p>
-	{{/if}}
+
+<script type="text/x-handlebars" data-template-name="components/intro-text">
+<p>RBSC offers its members sailing on the Norfolk Broads 52 weeks of the year. The Club welcomes
+ new members, whether expert sailors or complete novices, young or old! We have a wide range of
+ dinghy classes including:- Moth, Enterprise, Laser, Mirror, Optimist, Phantom, Topper, Solo,
+ Wayfarer, Wanderer. The club also has a selection of boats available for hire to members.</p>
+</script>
+
+<script type="text/x-handlebars" data-template-name="weather">
+speed = {{weather.wind.speed}}
 </script>

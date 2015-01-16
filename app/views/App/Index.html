@@ -5,16 +5,12 @@
 <script type="text/x-handlebars">
 <div class="main-content">
 	<div class="left-menu">
-		{{#weather-info}}
-		<p>stuff</p>
-		{{weatherPromise.responseJSON.wind.speed}}
-			{{calcWindSpeedMPH}}
-		{{/weather-info}}
+	
 	</div>
 	
 	<div class="content-pane">
 		<div class="promo-pane">
-			<p><<<.introText>>></p>
+			{{intro-text}}
 		</div>
 		
 		
