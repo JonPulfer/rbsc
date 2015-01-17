@@ -1,4 +1,4 @@
-SailingNews.Article = DS.Model.extend({
+App.Article = DS.Model.extend({
 	title: DS.attr('string'),
 	body: DS.attr('string'),
 });
