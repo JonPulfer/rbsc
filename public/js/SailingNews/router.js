@@ -1,9 +1,10 @@
 App.Router.map(function() {
-	this.resource('articles', { path: '/' });
+	this.resource('home', { path: '/'});
+	this.resource('news', { path: '/news' });
 	this.route('article', { path: '/article/:article_id'});
 });
 
-App.ArticlesRoute = Ember.Route.extend({
+App.NewsRoute = Ember.Route.extend({
  	model: function() {
     	// the model is an Array of all of the articles
     	return this.store.find('article');
@@ -28,4 +29,13 @@ App.ArticleRoute = Ember.Route.extend({
 			outlet: 'content',
 		});
   	},
+});
+
+App.HomeRoute = Ember.Route.extend({
+	renderTemplate: function() {
+		this.render({
+			into: 'application',
+			outlet: 'content',
+		});
+	},
 });
