@@ -8,3 +8,7 @@ App.Weather = Ember.Object.extend({
 		});
 	},
 });
+
+Ember.Handlebars.helper('windSpeed', function(value) {
+	return value/(1609.44/3600)
+})
